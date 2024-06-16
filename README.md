@@ -18,6 +18,7 @@
   - [🔍 Description](#-description)
   - [🌟 Features](#-features)
   - [📁 Repository Structure](#-repository-structure)
+  - [   Repo Link](#-repo-link) 
   - [💻 Code Summary](#-code-summary)
   - [🚀 Getting Started](#-getting-started)
   
@@ -32,7 +33,7 @@
 
 ## 🌟 Features
 
- Full-stack web application, PWA, Node.js, Express.js, React, webpack, frontend, backend, client-side, server-side, directory structure, package.json, package-lock.json, server, routes, htmlRoutes.js, server.js
+ Full-stack web application, PWA, Node.js, Express.js, webpack, frontend, backend, client-side, server-side, directory structure, package.json, server, routes, htmlRoutes.js, server.js
 
 ---
 
@@ -46,7 +47,6 @@
 │   ├── .gitignore
 │   ├── favicon.ico
 │   ├── index.html
-│   ├── package-lock.json
 │   ├── package.json
 │   ├── src
 │   │   ├── css
@@ -61,10 +61,8 @@
 │   │       └── install.js
 │   ├── src-sw.js
 │   └── webpack.config.js
-├── package-lock.json
 ├── package.json
 └── server
-    ├── package-lock.json
     ├── package.json
     ├── routes
     │   └── htmlRoutes.js
@@ -73,6 +71,10 @@
 ```
 
 ---
+
+##    Repo Link
+
+- [Link](https://github.com/fredm23579/pwa-text-edit)
 
 ## 💻 Code Summary
 
@@ -124,6 +126,12 @@
 ## 🚀 Getting Started
 
  To get started with this project, follow these steps:<br>
+
+```bash 
+git clone https://github.com/fredm23579/pwa-text-edit.git
+
+```
+
 1. Install the necessary dependencies by running `npm install` in both the client and server directories.
 2. Start the development server by running `npm run start:dev` in the root directory. This will start both the client and server development servers simultaneously.
 3. In a separate terminal window, navigate to the client directory and start the client development server by running `npm run client`.
