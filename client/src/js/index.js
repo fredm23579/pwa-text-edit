@@ -17,19 +17,17 @@ const loadSpinner = () => {
   main.appendChild(spinner);
 };
 
-const editor = new Editor();
+const editorInstance = new Editor();
 
-if (typeof editor === 'undefined') {
+if (typeof editorInstance === 'undefined') {
   loadSpinner();
 } else {
   const loadEditorContent = async () => {
     const data = await getDb();
+    console.log('Data from getDb:', data);
     const editorContent = data && data.length > 0 ? data[0].value : '';
-    editor.setValue(typeof editorContent === 'string' ? editorContent : '');
-    editor.on('blur', () => {
-      console.log('The editor has lost focus');
-      putDb(editor.getValue());
-    });
+    console.log('Setting editor content:', editorContent);
+    editorInstance.setValue(typeof editorContent === 'string' ? editorContent : '');
   };
   loadEditorContent();
 }
