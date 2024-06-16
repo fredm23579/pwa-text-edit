@@ -74,7 +74,7 @@
 
 ##    Repo Link
 
-- [Link](https://github.com/fredm23579/pwa-text-edit)
+- [pwa-text-edit](https://github.com/fredm23579/pwa-text-edit)
 
 ## 💻 Code Summary
 
