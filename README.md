@@ -15,7 +15,7 @@
   ---
   ## 📚 Table of Contents
   - [📚 Table of Contents](#-table-of-contents)
-  - [🔍 Overview](#-overview)
+  - [🔍 Description](#-description)
   - [🌟 Features](#-features)
   - [📁 Repository Structure](#-repository-structure)
   - [💻 Code Summary](#-code-summary)
@@ -24,9 +24,9 @@
   ---
   
   
-  ## 🔍 Overview
+  ## 🔍 Description
 
- This project appears to be a full-stack web application with a client and server directory structure. The client directory contains the frontend code, while the server directory contains the backend code. The project uses Node.js and Express.js for the server, and React for the client. The project also includes a webpack configuration file for building the client-side code.
+ This project is a full-stack web application with a client and server directory structure. The client directory contains the frontend code, while the server directory contains the backend code. The project uses Node.js and Express.js for the server, and React for the client. The project also includes a webpack configuration file for building the client-side code.
 
 ---
 
