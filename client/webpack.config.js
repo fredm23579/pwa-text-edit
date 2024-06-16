@@ -23,7 +23,7 @@ module.exports = () => {
       }),
       // Injects the custom service worker
       new InjectManifest({
-        swSrc: './src-sw.js', // Ensure this path is correct
+        swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
       // Generates the manifest file
@@ -37,7 +37,7 @@ module.exports = () => {
         publicPath: '/',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve('public/assets/icons/icon_96x96.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
