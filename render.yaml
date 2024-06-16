@@ -1,0 +1,12 @@
+# Exported from Render on 2024-06-16T22:05:28Z
+services:
+- type: web
+  name: pwa-text-edit
+  runtime: node
+  repo: https://github.com/fredm23579/pwa-text-edit
+  plan: free
+  region: oregon
+  buildCommand: npm install
+  startCommand: npm start
+  rootDir: ./
+version: "1"
