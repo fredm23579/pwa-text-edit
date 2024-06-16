@@ -1,6 +1,6 @@
 
   <div align="center">
-  <h1 align="center">pwa-text-edit</h1>
+  <h1 align="center">PWA Text Editor</h1>
   <h3>Codebase for the pwa-text-edit platform</h3>
   <h3>◦ Developed with the software and tools below.</h3>
   <p align="center"><img src="https://img.shields.io/badge/-Express.js-004E89?logo=Express.js&style=for-the-badge" alt='Express.js\' />
@@ -32,7 +32,7 @@
 
 ## 🌟 Features
 
- Full-stack web application, Node.js, Express.js, React, webpack, frontend, backend, client-side, server-side, directory structure, package.json, package-lock.json, server, routes, htmlRoutes.js, server.js
+ Full-stack web application, PWA, Node.js, Express.js, React, webpack, frontend, backend, client-side, server-side, directory structure, package.json, package-lock.json, server, routes, htmlRoutes.js, server.js
 
 ---
 
