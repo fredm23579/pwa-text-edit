@@ -1,4 +1,3 @@
-# Exported from Render on 2024-06-16T22:05:28Z
 services:
 - type: web
   name: pwa-text-edit
