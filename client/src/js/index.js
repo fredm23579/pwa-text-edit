@@ -17,23 +17,53 @@ const loadSpinner = () => {
   main.appendChild(spinner);
 };
 
-const editorInstance = new Editor();
+const stopSpinner = () => {
+  const spinner = document.querySelector('.loading-container');
+  if (spinner) {
+    spinner.remove();
+  }
+};
 
-if (typeof editorInstance === 'undefined') {
+const editor = new Editor();
+
+if (typeof editor === 'undefined') {
   loadSpinner();
 } else {
+  // Initialize the editor content from the database
   const loadEditorContent = async () => {
-    const data = await getDb();
-    console.log('Data from getDb:', data);
-    const editorContent = data && data.length > 0 ? data[0].value : '';
-    console.log('Setting editor content:', editorContent);
-    editorInstance.setValue(typeof editorContent === 'string' ? editorContent : '');
+    try {
+      const data = await getDb();
+      const editorContent = data && data.length > 0 ? data[0].value : '';
+
+      // Set the editor content without overwriting the ASCII art
+      const initialContent = `
+/*
+       _____  ____________
+      / /   |/_  __/ ____/
+ __  / / /| | / / / __/   
+/ /_/ / ___ |/ / / /___   
+ ____/_/  |_/_/ /_____/   
+just another text editor
+*/                          
+`;
+
+      // If there is existing content, append it to the initial content
+      editor.setValue(typeof editorContent === 'string' && editorContent.trim() !== '' ? editorContent : initialContent);
+    } catch (error) {
+      console.error('Error loading editor content:', error);
+    } finally {
+      // Stop the spinner regardless of success or failure
+      stopSpinner();
+    }
   };
+
   loadEditorContent();
 }
 
+// Check if service workers are supported
 if ('serviceWorker' in navigator) {
-  const workboxSW = new Workbox('/service-worker.js');
+  // Register workbox service worker
+  const workboxSW = new Workbox('/service-worker.js'); // Ensure the correct path
   workboxSW.register();
 } else {
   console.error('Service workers are not supported in this browser.');
