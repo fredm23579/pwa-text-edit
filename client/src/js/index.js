@@ -11,22 +11,30 @@ const loadSpinner = () => {
   spinner.classList.add('spinner');
   spinner.innerHTML = `
   <div class="loading-container">
-  <div class="loading-spinner" />
+  <div class="loading-spinner"></div>
   </div>
   `;
   main.appendChild(spinner);
 };
 
+loadSpinner();
+
 const editor = new Editor();
 
 if (typeof editor === 'undefined') {
   loadSpinner();
+} else {
+  const loadEditorContent = async () => {
+    const data = await getDb();
+    const editorContent = data && data.length > 0 ? data[0].value : '';
+    editor.setValue(typeof editorContent === 'string' ? editorContent : '');
+  };
+
+  loadEditorContent();
 }
 
-// Check if service workers are supported
 if ('serviceWorker' in navigator) {
-  // register workbox service worker
-  const workboxSW = new Workbox('/src-sw.js');
+  const workboxSW = new Workbox('/service-worker.js');
   workboxSW.register();
 } else {
   console.error('Service workers are not supported in this browser.');

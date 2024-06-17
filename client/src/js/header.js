@@ -1,5 +1,4 @@
-const header = `
-/*
+export const header = `/*
        _____  ____________
       / /   |/_  __/ ____/
  __  / / /| | / / / __/   
@@ -8,5 +7,3 @@ const header = `
 just another text editor
 */                          
 `;
-
-export { header };
